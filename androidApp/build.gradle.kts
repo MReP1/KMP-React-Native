@@ -4,6 +4,10 @@ plugins {
     id("com.facebook.react")
 }
 
+react {
+    root.set(file("../"))
+}
+
 android {
     namespace = "com.example.kmpreactnative"
     compileSdk = 34
@@ -59,6 +63,10 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.compose.material)
+
+    // React Native
+    implementation("com.facebook.react:react-android")
+    implementation("com.facebook.react:hermes-android")
 }
 
 apply(from = "../node_modules/@react-native-community/cli-platform-android/native_modules.gradle")

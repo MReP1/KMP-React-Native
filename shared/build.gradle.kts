@@ -67,6 +67,10 @@ kotlin {
     }
 }
 
+tasks.register("testClasses") {
+
+}
+
 android {
     namespace = "com.example.kmpreactnative.common"
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
